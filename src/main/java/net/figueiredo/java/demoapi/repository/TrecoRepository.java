@@ -1,6 +1,8 @@
-package net.figueiredo.java.demoapi;
+package net.figueiredo.java.demoapi.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import net.figueiredo.java.demoapi.model.Treco;
 
 public interface TrecoRepository extends JpaRepository<Treco, Long>{
 	

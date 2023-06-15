@@ -1,4 +1,4 @@
-package net.figueiredo.java.demoapi;
+package net.figueiredo.java.demoapi.control;
 
 import java.util.List;
 
@@ -12,45 +12,47 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import net.figueiredo.java.demoapi.model.Usuario;
+import net.figueiredo.java.demoapi.repository.UsuarioRepository;
+
 @RestController
-@RequestMapping("/trecos")
-public class TrecoController {
-	
+@RequestMapping("/usuario")
+
+public class UsuarioController {
+
 	@Autowired
-	private TrecoRepository trecoRepository;
+	private UsuarioRepository usuarioRepository;
 	
 	@GetMapping
-	public List<Treco> getAll(){
-		return trecoRepository.findAll();
+	public List<Usuario> getAll(){
+		return usuarioRepository.findAll();
 	}
 	
 	@GetMapping(path = "/{id}")
-	public Treco getOne(@PathVariable Long id) {
-		if(trecoRepository.existsById(id)) {
-			return trecoRepository.findById(id).get();
+	public Usuario getOne(@PathVariable Long id) {
+		if(usuarioRepository.existsById(id)) {
+			return usuarioRepository.findById(id).get();
 		}
 		return null;
-		
-		
-	}
 	
+	}
 	@PostMapping
-	public Treco post(@RequestBody Treco treco) {
-	       return trecoRepository.save(treco);
+	public Usuario post(@RequestBody Usuario usuario) {
+	       return usuarioRepository.save(usuario);
 }
-
+	
 	@DeleteMapping(path = "/{id}", produces = "application/json")
 	public String delete(@PathVariable Long id) {
-		if(trecoRepository.existsById(id)) {
-			trecoRepository.deleteById(id);
+		if(usuarioRepository.existsById(id)) {
+			usuarioRepository.deleteById(id);
 			return"{ \"status\" : \"deleted\" }";
 			}
 		return"{ \"status\" : \"error\" }";
 		
 		}
 	@PatchMapping(path = "/{id}")
-	public Treco patch(@PathVariable Long id, @RequestBody Treco treco) {
+	public Usuario patch(@PathVariable Long id, @RequestBody Usuario usuario) {
 		return null;
 	}
+	
 }
-
