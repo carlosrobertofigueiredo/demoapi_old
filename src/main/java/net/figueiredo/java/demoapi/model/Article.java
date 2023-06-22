@@ -1,3 +1,4 @@
+
 package net.figueiredo.java.demoapi.model;
 
 import jakarta.persistence.Column;

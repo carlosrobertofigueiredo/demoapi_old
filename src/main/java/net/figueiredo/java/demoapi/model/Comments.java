@@ -19,7 +19,16 @@ public class Comments {
 	private String cmt_date;
 
 	@Column
-	private Long cmt_author;
+	private String firebase_name;
+	
+	@Column
+	private String firebase_email;
+	
+	@Column
+	private String firebase_photo;
+	
+	@Column
+	private String firebase_uid;
 
 	@Column
 	private Long cmt_article;
@@ -47,12 +56,36 @@ public class Comments {
 		this.cmt_date = cmt_date;
 	}
 
-	public Long getCmt_author() {
-		return cmt_author;
+	public String getFirebase_name() {
+		return firebase_name;
 	}
 
-	public void setCmt_author(Long cmt_author) {
-		this.cmt_author = cmt_author;
+	public void setFirebase_name(String firebase_name) {
+		this.firebase_name = firebase_name;
+	}
+
+	public String getFirebase_email() {
+		return firebase_email;
+	}
+
+	public void setFirebase_email(String firebase_email) {
+		this.firebase_email = firebase_email;
+	}
+
+	public String getFirebase_photo() {
+		return firebase_photo;
+	}
+
+	public void setFirebase_photo(String firebase_photo) {
+		this.firebase_photo = firebase_photo;
+	}
+
+	public String getFirebase_uid() {
+		return firebase_uid;
+	}
+
+	public void setFirebase_uid(String firebase_uid) {
+		this.firebase_uid = firebase_uid;
 	}
 
 	public Long getCmt_article() {
@@ -78,5 +111,6 @@ public class Comments {
 	public void setCmt_status(String cmt_status) {
 		this.cmt_status = cmt_status;
 	}
+
 
 }
