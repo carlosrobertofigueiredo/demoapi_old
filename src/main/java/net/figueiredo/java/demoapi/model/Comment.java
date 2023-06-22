@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 
 @Entity
-public class Comments {
+public class Comment {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,13 +20,13 @@ public class Comments {
 
 	@Column
 	private String firebase_name;
-	
+
 	@Column
 	private String firebase_email;
-	
+
 	@Column
 	private String firebase_photo;
-	
+
 	@Column
 	private String firebase_uid;
 
@@ -111,6 +111,5 @@ public class Comments {
 	public void setCmt_status(String cmt_status) {
 		this.cmt_status = cmt_status;
 	}
-
 
 }
