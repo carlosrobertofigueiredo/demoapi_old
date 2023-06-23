@@ -8,3 +8,9 @@ org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-21
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
 2023-06-21 20:26:48 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2023-06-22 20:22:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Joca' (COMMENTS: ""CMT_AUTHOR"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."COMMENTS"("CMT_ID","CMT_ARTICLE","CMT_AUTHOR","CMT_COMMENT","CMT_DATE","CMT_STATUS","FIREBASE_EMAIL","FIREBASE_NAME","FIREBASE_PHOTO","FIREBASE_UID")VALUES(?,?,?,?,?,?,?,?,?,?) [22018-214]
+2023-06-22 20:22:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'Joca' (COMMENTS: ""CMT_AUTHOR"" BIGINT)"; SQL statement:
+INSERT INTO "PUBLIC"."COMMENTS"("CMT_ID","CMT_ARTICLE","CMT_AUTHOR","CMT_COMMENT","CMT_DATE","CMT_STATUS","FIREBASE_EMAIL","FIREBASE_NAME","FIREBASE_PHOTO","FIREBASE_UID")VALUES(?,?,?,?,?,?,?,?,?,?) [22018-214]
